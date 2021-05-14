@@ -36,8 +36,8 @@
     color:black;
 }
 .sho-show-title{
-    font-family: Lobster;
-    background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+    font-family: Quicksand;
+    background: linear-gradient(to left, #00c6ff, #0072ff);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
@@ -45,11 +45,45 @@
     font-weight: bold;
 }
 .sho-show-subtitle{
-    font-family: Quicksand;
+    font-family: Poppins;
+    background: linear-gradient(to left, #000000, #030303);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    font-weight: 300;
 }
+.sho-show-btn{
+    font-family: Arial;
+    background: linear-gradient(to left, #116dff, #116dff);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    font-weight: 100;
+}
+.sho-show-btn:hover{
+    font-family: Arial;
+    background: linear-gradient(to left, #00ccff, #00a2ff);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    font-weight: 100;
+}
+
 .sho-site-title{
     font-family: Lobster;
     background: linear-gradient(to left, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    font-weight: bold;
+}
+.sho-site-subtitle{
+    font-family: Lobster;
+    background: linear-gradient(to right, #00f2b5, #0575e6);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 

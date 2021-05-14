@@ -2,11 +2,11 @@
 include('lib/updater.php');
 include('lib/add.php');
 ?>
- 
+
 <!DOCTYPE html>
 <html>
 <head> 
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,8 +21,8 @@ include('lib/add.php');
 
 <div style="float:left;width:12%;"><br></div>
 <div style="float:left;width:76%;">
-   <!--NAVBAR-->
-   <div class="tm-header">
+    <!--NAVBAR-->
+    <div class="tm-header">
             <div class="container-fluid">
                 <div class="tm-header-inner">
                     <a href="./index.php" class="navbar-brand sho-site-title">shobhanoffl.tk</a>
@@ -41,10 +41,10 @@ include('lib/add.php');
                                 </li>
                             <?php endforeach ?>
                             <li class="nav-item">
-                            <a href="./login.php" class="nav-link"><span class="material-icons md-18" style="vertical-align:middle;">search</span> Search</a>
+                            <a href="./search.php" class="nav-link"><span class="material-icons" style="vertical-align:middle;">search</span> Search</a>
                             </li>
                             <li class="nav-item">
-                            <a href="./login.php" class="nav-link"><span class="material-icons md-18" style="vertical-align:middle;">manage_accounts</span> Users</a>
+                            <a href="./login.php" class="nav-link"><span class="material-icons" style="vertical-align:middle;">manage_accounts</span> Users</a>
                             </li>
                             </ul>                        
                         </div>
@@ -55,59 +55,48 @@ include('lib/add.php');
             </div>            
         </div>
     <!--NAVBAR-->
-    
-    <!--CENTRE-->
-        <div class="tm-home-img-container">
-            <img src="<?php echo $img[0]; ?>" alt="Image" class="img-fluid" style="object-fit: cover;height: 60vh;width: 100%;">
-        </div>
-    <!--CENTRE-->
 
-        <section>
+        <section class="tm-section">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                        <h2 class="tm-gold-text sho-post-title"><?php echo $title[0]; ?></h2><br>
-                        <p class="tm-subtitle sho-post-subtitle"><?php echo $subtitle[0]; ?></p>
-                        <small style="color:black;">
-                        An Article by <b class="sho-small"> <?php echo $author[0]; ?></b>&nbsp; :: &nbsp;
-                        Posted on <b class="sho-small"> <?php echo $date[0]; ?></b>&nbsp; :: &nbsp;
-                        at <b class="sho-small"> <?php echo $time[0]; ?></b>&nbsp; :: &nbsp;
-                        <br><br><br><br>
-                        </small>
-                        </div>
-                        <body class="sho-post-post"><?php echo $content[0]; ?></body><br><br>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                        <hr>
-                        <small style="color:black; float:left; padding-top:45px;">Sources Referred: &nbsp;
-                        <?php
-                        $source_arr=explode(",",$sources[0]);
-                        $link_arr=explode(",",$links[0]);
-                        for($j=0; $j<count($source_arr); $j+=1):?>
-                        <b class="sho-small"><a href="https://<?php echo $link_arr[$j]; ?>" target="_blank"><?php echo $source_arr[$j]; ?></a></b>
-                        <?php endfor; ?>
-                        </small>
+                        <h2 class="tm-gold-text sho-post-title" style="padding-bottom:20px;">Search for Tags</h2>
+                            <form method="GET" action="search.php">
+                                <center>
+                                <input type="text" name="getpost_sr" placeholder="Enter a Single Word to Search" class="form-control" style="width:30em; height:2.2em;"><br>
+                                </center>
+                                <input type="submit" value="Search" class="btn btn-primary">
+                            </form>
+                        <p class="tm-subtitle"></p>
                     </div>
                 </div>
-                <!--Similar Posts-->
-                <div class="row" style="padding-top:15px;">
-                <h2 class="tm-gold-text sho-site-subtitle text-xs-center" style="padding-bottom:15px;">Similar Posts</h2><br>
-
-                <?php for ($i = 0; $i < count($title5); $i+=1): ?>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                <!--RECENT POSTS-->
+                <div class="row">
+                <h2 class="tm-gold-text sho-show-title text-xs-center" style="padding-bottom:15px;">Search Results</h2><br>
+                <?php if (isset($_GET['getpost_sr'])){ ?>
+                    <?php for ($i = 0; $i < count($title4); $i+=1): ?>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3" style="padding-top:25px;">
                         <div class="tm-content-box">
-                            <img src="<?php echo $img5[$i]; ?>" alt="Image" class="tm-margin-b-20 img-fluid" style="object-fit: cover;height: 25vh;width: 100%;">
-                            <h4 class="tm-margin-b-20 tm-gold-text sho-show-title"><?php echo $title5[$i]; ?></h4>
-                            <p class="tm-margin-b-20 sho-show-subtitle"><?php echo $subt5[$i]; ?>...</p>
-                            <a href="./post.php?getpost=<?php echo $bno5[$i]; ?>&pgofblog=<?php echo $pgofblog3[$i]; ?>" class="tm-btn">Read More...</a>    
+                            <img src="<?php echo $img4[$i]; ?>" alt="Image" class="tm-margin-b-20 img-fluid" style="object-fit: cover;height: 25vh;width: 100%;">
+                            <h4 class="tm-margin-b-20 tm-gold-text"><?php echo $title4[$i]; ?></h4>
+                            <p class="tm-margin-b-20"><?php echo $subt4[$i]; ?>...</p>
+                            <a href="./post.php?getpost=<?php echo $bno4[$i]; ?>&pgofblog=<?php echo $pgofblog3[$i]; ?>" class="tm-btn">Read More</a>    
                         </div>  
                     </div>
                 <?php endfor; ?>
-
+                <?php
+                }
+                else{ 
+                ?>
+                <center>
+                    <h4 class="tm-margin-b-20 tm-gold-text" style="color:black;">Search to see the results here</h4>
+                </center>
+                <?php } ?>
                 </div>
-                <!--Similar Posts-->
+                <!--RECENT POSTS-->
             </div>
         </section>   
-        <br><br><br>
+        
         <!--FOOTER-->
         <footer style="background-color: black;">
             <div class="container-fluid">

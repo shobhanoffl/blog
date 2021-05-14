@@ -45,7 +45,7 @@ a{
     <ul class="navbar-nav">
       
       <li class="nav-item">
-      <a href="index.php" class=nav-link><i class="fa fa-home"></i> Back to Home</a>
+      <a href="../index.php" class=nav-link><i class="fa fa-home"></i> Back to Home</a>
       </li>
     
     </ul>

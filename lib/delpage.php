@@ -6,6 +6,11 @@ if(!isset($_SESSION['email']) || empty($_SESSION['email'])){
   header('location: ../apanel.php?logout=success');
   exit();
 }
+
+if(!isset($_SESSION['admin']) || empty($_SESSION['admin'])){
+  header('location: ../apanel.php?logout=success');
+  exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +50,7 @@ a{
     <ul class="navbar-nav">
       
       <li class="nav-item">
-      <a href="index.php" class=nav-link><i class="fa fa-home"></i> Back to Home</a>
+      <a href="../index.php" class=nav-link><i class="fa fa-home"></i> Back to Home</a>
       </li>
     
     </ul>

@@ -13,6 +13,7 @@ include('lib/add.php');
     <title>Classic - Responsive Bootstrap 4.0 Template</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">                                      
     <link rel="stylesheet" href="css/templatemo-style.css">  
     <link rel="stylesheet" href="css/sho.css">                           
@@ -21,10 +22,10 @@ include('lib/add.php');
 <div style="float:left;width:12%;"><br></div>
 <div style="float:left;width:76%;">
     <!--NAVBAR-->
-        <div class="tm-header">
+    <div class="tm-header">
             <div class="container-fluid">
                 <div class="tm-header-inner">
-                    <a href="index.php" class="navbar-brand sho-site-title">shobhanoffl.tk</a>
+                    <a href="./index.php" class="navbar-brand sho-site-title">shobhanoffl.tk</a>
                     
                     <nav class="navbar tm-main-nav">
 
@@ -39,6 +40,12 @@ include('lib/add.php');
                                 <a href="./page.php?getpage=<?php echo $pgname2 ?>" class="nav-link"><?php echo $pgname2 ?></a>
                                 </li>
                             <?php endforeach ?>
+                            <li class="nav-item">
+                            <a href="./login.php" class="nav-link"><span class="material-icons md-18" style="vertical-align:middle;">search</span> Search</a>
+                            </li>
+                            <li class="nav-item">
+                            <a href="./login.php" class="nav-link"><span class="material-icons md-18" style="vertical-align:middle;">manage_accounts</span> Users</a>
+                            </li>
                             </ul>                        
                         </div>
                         
@@ -63,23 +70,23 @@ include('lib/add.php');
                         <p class="tm-subtitle"><?php echo $pgdesc3[0] ?></p>
                     </div>
                 </div>
-                <!--RECENT POSTS-->
-                <div class="row">
-                <h2 class="tm-gold-text sho-show-title text-xs-center" style="padding-bottom:15px;">Posts from this Page</h2><br>
+                <!--POSTS FROM THIS PAGE-->
+                <div class="row" style="padding-top:15px;">
+                <h2 class="tm-gold-text sho-site-subtitle text-xs-center" style="padding-bottom:15px;">Posts from this Page</h2><br>
 
-                    <?php for ($i = 0; $i < 8; $i+=1): ?>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3" style="padding-top:25px;">
+                <?php for ($i = 0; $i < count($title5); $i+=1): ?>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                         <div class="tm-content-box">
-                            <img src="<?php echo $img3[$i]; ?>" alt="Image" class="tm-margin-b-20 img-fluid" style="object-fit: cover;height: 25vh;width: 100%;">
-                            <h4 class="tm-margin-b-20 tm-gold-text"><?php echo $title3[$i]; ?></h4>
-                            <p class="tm-margin-b-20"><?php echo $subt3[$i]; ?>...</p>
-                            <a href="./post.php?getpost=<?php echo $bno3[$i]; ?>" class="tm-btn">Read More</a>    
+                            <img src="<?php echo $img5[$i]; ?>" alt="Image" class="tm-margin-b-20 img-fluid" style="object-fit: cover;height: 25vh;width: 100%;">
+                            <h4 class="tm-margin-b-20 tm-gold-text"><?php echo $title5[$i]; ?></h4>
+                            <p class="tm-margin-b-20"><?php echo $subt5[$i]; ?>...</p>
+                            <a href="./post.php?getpost=<?php echo $bno5[$i]; ?>&pgofblog=<?php echo $pgofblog3[$i]; ?>" class="tm-btn">Read More</a>    
                         </div>  
                     </div>
                 <?php endfor; ?>
-                
+
                 </div>
-                <!--RECENT POSTS-->
+                <!--POSTS FROM THIS PAGE-->
             </div>
         </section>   
         

@@ -45,6 +45,7 @@ if (isset($_GET['logout'])) {
       <li><a href="signup.php" class=nav-link><i class="fa fa-user-plus"></i> Sign Up</a></li>
       <?php if(isset($_SESSION['email'])){ ?>
       <li><a href="./apanel.php?logout=success" style="color: red;" class=nav-link><i class="fa fa-user-times"></i><?php echo"Logout" ?></a></label></li>
+      <li><a href="./lib/dash.php" class=nav-link><i class="fa fa-cog"></i> Dashboard</a></li>
       <?php }else{ ?>
       <li><a href="login.php" class=nav-link><i class="fa fa-user-circle"></i><?php echo"Login" ?></a></li>
       <?php } ?>

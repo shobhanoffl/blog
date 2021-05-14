@@ -44,7 +44,7 @@ button{
     <ul class="navbar-nav">
       
       <li class="nav-item">
-      <a href="index.php" class=nav-link><i class="fa fa-home"></i> Back to Home</a>
+      <a href="../index.php" class=nav-link><i class="fa fa-home"></i> Back to Home</a>
       </li>
     
     </ul>
@@ -64,12 +64,12 @@ button{
 <small class="mr-auto">Welcome <i class="text-primary"><?php echo $_SESSION['name']; ?></i> Signed in as <i class="text-primary"><?php echo $_SESSION['email']; ?></i></small><br><br>
 <a href="newpost.php"><button class="btn btn-success"><i class="fa fa-plus-square"></i> New Blog Post</button></a>
 <a href="delpost.php"><button class="btn btn-danger"><i class="fa fa-trash"></i> Delete Post</button></a><br><br>
-<a href="newpage.php"><button class="btn btn-success"><i class="fa fa-file"></i> New Page</button></a>
-<a href="delpage.php"><button class="btn btn-danger"><i class="fa fa-trash"></i> Delete Page</button></a><br><br>
 <?php if(isset($_SESSION['admin'])){?>
 <br>
 <h5>SuperUser Panel</h5>
 <hr>
+<a href="newpage.php"><button class="btn btn-success"><i class="fa fa-file"></i> New Page</button></a>
+<a href="delpage.php"><button class="btn btn-danger"><i class="fa fa-trash"></i> Delete Page</button></a><br><br>
 <a href="deluser.php"><button class="btn btn-danger"><i class="fa fa-user-times"></i><?php echo " Remove User"; ?></button></a>
 <a href="changeskey.php"><button class="btn btn-info"><i class="fa fa-key"></i><?php echo " Change Secret Key"; ?></button></a>
 <?php } ?>

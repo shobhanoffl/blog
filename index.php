@@ -25,7 +25,7 @@ include('lib/add.php');
         <div class="tm-header">
             <div class="container-fluid">
                 <div class="tm-header-inner">
-                    <a href="#" class="navbar-brand sho-site-title">shobhanoffl.tk</a>
+                    <a href="./index.php" class="navbar-brand sho-site-title">shobhanoffl.tk</a>
                     
                     <nav class="navbar tm-main-nav">
 
@@ -41,10 +41,10 @@ include('lib/add.php');
                                 </li>
                             <?php endforeach ?>
                             <li class="nav-item">
-                            <a href="./login.php" class="nav-link"><span class="material-icons" style="vertical-align:middle;">search</span> Search</a>
+                            <a href="./search.php" class="nav-link"><span class="material-icons md-18" style="vertical-align:middle;">search</span> Search</a>
                             </li>
                             <li class="nav-item">
-                            <a href="./login.php" class="nav-link"><span class="material-icons" style="vertical-align:middle;">manage_accounts</span> Users</a>
+                            <a href="./login.php" class="nav-link"><span class="material-icons md-18" style="vertical-align:middle;">manage_accounts</span> Users</a>
                             </li>
                             </ul>                        
                         </div>
@@ -58,7 +58,7 @@ include('lib/add.php');
     
      <!--CENTRE-->
      <div class="tm-home-img-container">
-        <img src="https://images.pexels.com/photos/3781270/pexels-photo-3781270.jpeg" alt="Image" class="img-fluid" style="object-fit: cover;height: 75vh;width: 100%;">
+        <img src="./img/mountain.jpg" alt="Image" class="img-fluid" style="object-fit: cover;height: 75vh;width: 100%;">
     </div>
 <!--CENTRE-->
 
@@ -66,21 +66,21 @@ include('lib/add.php');
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                        <h2 class="tm-gold-text sho-pg-title">Introduction</h2>
-                        <p class="tm-subtitle">Suspendisse ut magna vel velit cursus tempor ut nec nunc. Mauris vehicula, augue in tincidunt porta, purus ipsum blandit massa.</p>
+                        <h2 class="tm-gold-text sho-pg-title">Welcome!</h2><br>
+                        <p class="tm-subtitle">This is my Blog Page, where I share my thoughts...<br>You can also find articles of others as well...<br>To Begin Writing Here... <a href="./help.php">Click Here...</a></p>
                     </div>
                 </div>
                 <!--RECENT POSTS-->
                 <div class="row" style="padding-top:15px;">
-                <h2 class="tm-gold-text sho-show-title text-xs-center" style="padding-bottom:15px;">Recent Posts</h2><br>
+                <h2 class="tm-gold-text sho-show-title text-xs-center sho-site-subtitle" style="padding-bottom:15px;">Recent Posts</h2><br>
 
                 <?php for ($i = 0; $i < 4; $i+=1): ?>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                         <div class="tm-content-box">
                             <img src="<?php echo $img3[$i]; ?>" alt="Image" class="tm-margin-b-20 img-fluid" style="object-fit: cover;height: 25vh;width: 100%;">
-                            <h4 class="tm-margin-b-20 tm-gold-text"><?php echo $title3[$i]; ?></h4>
-                            <p class="tm-margin-b-20"><?php echo $subt3[$i]; ?>...</p>
-                            <a href="./post.php?getpost=<?php echo $bno3[$i]; ?>" class="tm-btn">Read More</a>    
+                            <h4 class="tm-margin-b-20 tm-gold-text sho-show-title"><?php echo $title3[$i]; ?></h4>
+                            <p class="tm-margin-b-20 sho-show-subtitle"><?php echo $subt3[$i]; ?>...</p>
+                            <a href="./post.php?getpost=<?php echo $bno3[$i]; ?>&pgofblog=<?php echo $pgofblog3[$i]; ?>" class="tm-btn">Read More...</a>    
                         </div>  
                     </div>
                 <?php endfor; ?>

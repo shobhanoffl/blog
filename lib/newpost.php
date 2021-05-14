@@ -44,7 +44,7 @@ a{
     <ul class="navbar-nav">
       
       <li class="nav-item">
-      <a href="index.php" class=nav-link><i class="fa fa-home"></i> Back to Home</a>
+      <a href="../index.php" class=nav-link><i class="fa fa-home"></i> Back to Home</a>
       </li>
     
     </ul>
@@ -65,29 +65,29 @@ a{
 <a href="dash.php"><button class="btn btn-info"><i class="fa fa-arrow-left"></i> Back</button></a><br><br>
 <form method="POST" action="newpost.php">
   <label for="title">Title:</label><br>
-  <input type="text" name="title" placeholder="Enter your blog title" size="80" class="form-control"><br>
+  <input type="text" name="title" placeholder="Enter your blog title" size="80" class="form-control" autocomplete="off"><br>
   
   <label for="subtitle">Subtitle:</label><br>
-  <input type="text" name="subtitle" placeholder="Enter your blog Subtitle" size="80" class="form-control"><br>
+  <input type="text" name="subtitle" placeholder="Enter your blog Subtitle" size="80" class="form-control" autocomplete="off"><br>
   
   <label for="img">Image Link:</label><br>
-  <input type="text" name="img" placeholder="Enter the Image Link" size="80" class="form-control"><br>
+  <input type="text" name="img" placeholder="Enter the Image Link" size="80" class="form-control" autocomplete="off"><br>
   
   <label for="editor">Content:</label>
   <textarea name="editor" id="editor" rows="40" cols="80" class="form-control" placeholder="Your Content goes here...">
   </textarea><br>
 
-  <label for="sources">Sources:</label><br>
-  <input type="text" name="sources" placeholder="Enter the sources you referred" size="80" class="form-control"><br>
+  <label for="sources">Sources:</label><small style="color:#999999;"> &nbsp;&nbsp;&nbsp;&nbsp;'Enter Sources in accordance with Links / Enter comma separated texts'</small><br>
+  <input type="text" name="sources" placeholder="Enter the sources you referred" size="80" class="form-control" autocomplete="off"><br>
+  
+  <label for="links">Links: </label><small style="color:#999999;"> &nbsp;&nbsp;&nbsp;&nbsp;'https://' already included</small><br>
+  <input type="text" name="links" placeholder="Enter the links for referrence" size="80" class="form-control" autocomplete="off"><br>
   
   <label for="tags">Tags:</label><br>
-  <input type="text" name="tags" placeholder="Enter the Tags" size="80" class="form-control"><br>
+  <input type="text" name="tags" placeholder="Enter the Tags" size="80" class="form-control" autocomplete="off"><br>
 
   <label for="pgofblog">Page of Blog:</label><br>
-  <input type="text" name="pgofblog" placeholder="Enter the Page of Blog" size="80" class="form-control"><br>
-
-  <label for="links">Links:</label><br>
-  <input type="text" name="links" placeholder="Enter the links for referrence" size="80" class="form-control"><br>
+  <input type="text" name="pgofblog" placeholder="Enter the Page of Blog" size="80" class="form-control" autocomplete="off"><br>
 
   <input class="btn btn-primary" type="submit" name="addblog_btn" value="Submit">
 </form>

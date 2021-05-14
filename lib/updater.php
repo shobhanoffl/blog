@@ -66,8 +66,23 @@ if (isset($_GET['getpage'])){
         $pgname3[] = $row10['pgname'];
         $pgdesc3[] = $row10['pgdesc'];
         $pgimg3[] = $row10['pgimg'];
+
+        $bno5=array();
+        $title5=array(); 
+        $subt5=array(); 
+        $img5=array();
+        $pgofblog5=array(); 
+        $sql14 = "SELECT bno,title,SUBSTRING(subtitle, 1, 50) AS subt,img,pgofblog FROM blogs WHERE pgofblog='".$_GET['getpage']."'";
+        $result14 = mysqli_query($db, $sql14);
+        while($row14=mysqli_fetch_assoc($result14)){
+            $title5[]=$row14['title']; 
+            $subt5[]=$row14['subt'];
+            $img5[]=$row14['img'];
+            $bno5[]=$row14['bno'];
+            $pgofblog5[]=$row14['pgofblog'];
+        }
     }
-}
+} 
 
 //GET FULL POST
 if (isset($_GET['getpost'])){
@@ -101,13 +116,52 @@ $bno3=array();
 $title3=array(); 
 $subt3=array(); 
 $img3=array(); 
-$sql12 = "SELECT bno,title,SUBSTRING(subtitle, 1, 50) AS subt,img FROM blogs ORDER BY bno DESC";
+$pgofblog3=array();
+$sql12 = "SELECT bno,title,SUBSTRING(subtitle, 1, 50) AS subt,img,pgofblog FROM blogs ORDER BY bno DESC";
 $result12 = mysqli_query($db, $sql12);
 while($row12=mysqli_fetch_assoc($result12)){
     $title3[]=$row12['title']; 
     $subt3[]=$row12['subt'];
     $img3[]=$row12['img'];
     $bno3[]=$row12['bno'];
+    $pgofblog3[]=$row12['pgofblog'];
+}
+
+//GET SMALL POST - SEARCH
+if (isset($_GET['getpost_sr'])){
+    $bno4=array();
+    $title4=array(); 
+    $subt4=array(); 
+    $img4=array();
+    $ab='%';
+    $bb='%';
+    $ca=$ab.$_GET['getpost_sr'].$bb;
+    $sql13 = "SELECT bno,title,SUBSTRING(subtitle, 1, 50) AS subt,img FROM blogs WHERE tags LIKE '".$ca."'";
+    $result13 = mysqli_query($db, $sql13);
+    while($row13=mysqli_fetch_assoc($result13)){
+        $title4[]=$row13['title']; 
+        $subt4[]=$row13['subt'];
+        $img4[]=$row13['img'];
+        $bno4[]=$row13['bno'];
+    }
+}
+
+//GET SMALL POST - BY PAGE
+if (isset($_GET['pgofblog'])){
+    $bno5=array();
+    $title5=array(); 
+    $subt5=array(); 
+    $img5=array();
+    $pgofblog5=array(); 
+    $sql14 = "SELECT bno,title,SUBSTRING(subtitle, 1, 50) AS subt,img,pgofblog FROM blogs WHERE pgofblog='".$_GET['pgofblog']."'";
+    $result14 = mysqli_query($db, $sql14);
+    while($row14=mysqli_fetch_assoc($result14)){
+        $title5[]=$row14['title']; 
+        $subt5[]=$row14['subt'];
+        $img5[]=$row14['img'];
+        $bno5[]=$row14['bno'];
+        $pgofblog5[]=$row14['pgofblog'];
+    }
 }
 
 ?>
