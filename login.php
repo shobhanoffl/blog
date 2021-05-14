@@ -58,7 +58,7 @@ include('lib/updater.php');
     <label for="pass">Password:</label><br>
     <input type="password" class="form-control" size="10" placeholder="Enter your Password" name="pass"><br>
     <button type="submit" class="btn btn-primary" name="login_btn">Login</button>
-    <small style="padding-left:10px; vertical-align:bottom;">New Member? <a href="#">Create Account</a></small><br><br>
+    <small style="padding-left:10px; vertical-align:bottom;">New Member? <a href="./signup.php">Create Account</a></small><br><br>
     <?php  if (count($errors) > 0) : ?>
         <div class="alert alert-danger" role="alert">
   	<?php foreach ($errors as $error) : ?>

@@ -64,7 +64,7 @@ include('lib/updater.php');
     <label for="scode">Enter your Secret Code</label><br>
     <input type="text" class="form-control" size="10" placeholder="Enter Secret Code" name="scode"><br>
     <button type="submit" class="btn btn-primary" name="signup_btn">Signup</button>
-    <small style="padding-left:10px; vertical-align:bottom;">Already a member? <a href="#">Log in</a></small>
+    <small style="padding-left:10px; vertical-align:bottom;">Already a member? <a href="./login.php">Log in</a></small>
     <br><br>
     <?php  if (count($errors) > 0) : ?>
         <div class="alert alert-danger" role="alert">

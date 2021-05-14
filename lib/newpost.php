@@ -56,8 +56,8 @@ a{
 </nav>
 <!--NAVIGATION BAR--> 
 
-<div style="width:25%;float:left;"><br></div>
-<div style="width:50%;float:left;">
+<div style="width:10%;float:left;"><br></div>
+<div style="width:80%;float:left;">
 <br>
 <h5>New Blog Post</h5>
 <hr>
@@ -92,7 +92,7 @@ a{
   <input class="btn btn-primary" type="submit" name="addblog_btn" value="Submit">
 </form>
 </div>
-<div style="width:15%;float:left;"><br></div>
+<div style="width:10%;float:left;"><br></div>
 
 <!--SCRIPTS-->
 <script type="text/javascript">

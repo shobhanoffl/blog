@@ -68,7 +68,7 @@ button{
 <a href="delpage.php"><button class="btn btn-danger"><i class="fa fa-trash"></i> Delete Page</button></a><br><br>
 <?php if(isset($_SESSION['admin'])){?>
 <br>
-<h5>Admin Panel</h5>
+<h5>SuperUser Panel</h5>
 <hr>
 <a href="deluser.php"><button class="btn btn-danger"><i class="fa fa-user-times"></i><?php echo " Remove User"; ?></button></a>
 <a href="changeskey.php"><button class="btn btn-info"><i class="fa fa-key"></i><?php echo " Change Secret Key"; ?></button></a>
