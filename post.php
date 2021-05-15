@@ -70,7 +70,17 @@ include('lib/add.php');
                         <p class="tm-subtitle sho-post-subtitle"><?php echo $subtitle[0]; ?></p>
                         <small style="color:black;">
                         An Article by <b class="sho-small"> <?php echo $author[0]; ?></b>&nbsp; :: &nbsp;
-                        Posted on <b class="sho-small"> <?php echo $date[0]; ?></b>&nbsp; :: &nbsp;
+                        <i>
+                        <?php
+                        if(isset($edit[0])){
+                            echo "Edited";
+                        }
+                        else{
+                            echo "Posted";
+                        }
+                        ?>
+                        </i>
+                         on <b class="sho-small"> <?php echo $date[0]; ?></b>&nbsp; :: &nbsp;
                         at <b class="sho-small"> <?php echo $time[0]; ?></b>&nbsp; :: &nbsp;
                         <br><br><br><br>
                         </small>

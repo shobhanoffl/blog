@@ -37,6 +37,7 @@ include('lib/updater.php');
     
     </ul>
     <ul class="navbar-nav ml-auto">
+    <li><a href="help.php" class=nav-link><i class="fa fa-info-circle"></i> Help</a></li>
       <li><a href="signup.php" class=nav-link><i class="fa fa-user-plus"></i> Sign Up</a></li>
       <?php if(isset($_SESSION['email'])){ ?>
       <li><a href="./apanel.php?logout=success" style="color: red;" class=nav-link><i class="fa fa-user-times"></i><?php echo"Logout" ?></a></label></li>

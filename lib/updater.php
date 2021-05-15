@@ -95,6 +95,7 @@ if (isset($_GET['getpost'])){
     $time=array();
     $author=array();
     $links=array();
+    $edit=array();
 
     $sql11 = "SELECT * FROM blogs WHERE bno='".$_GET['getpost']."'";
     $result11 = mysqli_query($db, $sql11);
@@ -108,6 +109,7 @@ if (isset($_GET['getpost'])){
         $time[]=$row11['time'];
         $author[]=$row11['author'];
         $links[]=$row11['links'];
+        $edit[]=$row11['edit'];
     }
 } 
 
@@ -164,4 +166,53 @@ if (isset($_GET['pgofblog'])){
     }
 }
 
+//EDIT BLOG POST
+if (isset($_GET['editp_bno'])){
+    $sql15 = "SELECT * FROM blogs WHERE bno='" .$_GET["editp_bno"]. "'";
+    if($result15=mysqli_query($db, $sql15)){
+        while($row15=mysqli_fetch_assoc($result15)){
+            $title7[]=$row15['title']; 
+            $subtitle7[]=$row15['subtitle'];
+            $img7[]=$row15['img']; 
+            $content7[]=$row15['content'];
+            $sources7[]=$row15['sources'];
+            $date7[]=$row15['date'];
+            $time7[]=$row15['time'];
+            $author7[]=$row15['author'];
+            $links7[]=$row15['links'];
+            $tags7[]=$row15['tags'];
+            $pgofblog7[]=$row15['pgofblog'];
+            $bno7[]=$row15['bno'];
+        }
+    }
+    else{
+        header('location: editpost.php?postpicked=failed');
+    }
+}
+
+//UPDATE EDITED BLOG
+if(isset($_POST['editblog_btn'])){
+    $title8=mysqli_real_escape_string($db, $_POST['title']);
+    $subtitle8=mysqli_real_escape_string($db, $_POST['subtitle']);
+    $img8=mysqli_real_escape_string($db, $_POST['img']);
+    $editor8=mysqli_real_escape_string($db, $_POST['editor']);
+    $sources8=mysqli_real_escape_string($db, $_POST['sources']);
+    $pgofblog8=mysqli_real_escape_string($db, $_POST['pgofblog']);
+    $tags8=mysqli_real_escape_string($db, $_POST['tags']);
+    $author8=$_SESSION['name'];
+    $links8=mysqli_real_escape_string($db, $_POST['links']);
+    date_default_timezone_set("Asia/Calcutta");
+    $date8=date("d/m/Y");
+    $time8=date("H:i:s");
+    $edit=1;
+    $bno8=mysqli_real_escape_string($db, $_POST['bno']);
+    $editblog_query = "UPDATE blogs SET title='$title8',subtitle='$subtitle8',img='$img8',content='$editor8',sources='$sources8',date='$date8',time='$time8',author='$author8',links='$links8',tags='$tags8',pgofblog='$pgofblog8',edit='$edit' WHERE bno='$bno8'";
+    //mysqli_query($db, $addblog_query);
+    if (mysqli_query($db, $editblog_query)){
+      header('location: editpost.php?editblog=success');
+    }
+    else{
+      header('location: editpost.php?editblog=failed');
+    }
+  }
 ?>
