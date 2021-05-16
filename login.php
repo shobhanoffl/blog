@@ -49,9 +49,8 @@ include('lib/updater.php');
   </div>
 </nav>
 <!--NAVIGATION BAR-->
-<br><br>
-<div style="width: 25%; float: left;"><br></div>
-<div style="width: 50%; float: left;background:white; border: 1px solid black; padding:10px;">
+<div style="width: 100%; float: left;background:url('https://images.pexels.com/photos/7134986/pexels-photo-7134986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-size:cover; padding:10px;">
+    <br>
     <div class="container form-group" style="padding:30px 40px 0px 40px;">
     <h class="h2 d-flex justify-content-center">Login</h><br>
     <form method="POST" action="login.php">
@@ -70,7 +69,7 @@ include('lib/updater.php');
     <?php  endif ?>
     </form>
     </div>
-    <br>
+    <br><br><br>
 </div>
-<div style="width: 25%; float: left;"><br></div>
+<div style="float:left;height:35vh;width:100%;"><br></div>
 </html>

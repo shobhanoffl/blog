@@ -19,8 +19,7 @@ include('lib/add.php');
     <link rel="stylesheet" href="css/sho.css">                           
 </head>
 
-<div style="float:left;width:12%;"><br></div>
-<div style="float:left;width:76%;">
+<div style="float:left;width:100%;">
    <!--NAVBAR-->
    <div class="tm-header">
             <div class="container-fluid">
@@ -117,17 +116,16 @@ include('lib/add.php');
                 <!--Similar Posts-->
             </div>
         </section>   
-        <br><br><br>
+        <section style="height:35vh;width:100%;"><br></section>
         <!--FOOTER-->
         <footer style="background-color: black;">
             <div class="container-fluid">
-                    Hello
+            All the Posts are of Personal opinions, in case of any dispute, Mail to rshobhan02@gmail.com
             </div>
         </footer>
         <!--FOOTER-->
 
 </div>
-<div style="float:left;width:12%;"><br></div>
 
 <!-- load JS files -->
 <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->

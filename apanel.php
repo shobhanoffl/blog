@@ -54,13 +54,12 @@ if (isset($_GET['logout'])) {
   </div>
 </nav>
 <!--NAVIGATION BAR-->
-<div style="float:left;width:25%;"><br></div>
-<div style="float:left;width:50%;background: url('https://assets.materialup.com/uploads/b6992fb2-7bf4-401d-a233-e34a486b9337/gif.gif');background-size:cover;height:100vh;">
+<div style="float:left;width:100%;background: url('https://assets.materialup.com/uploads/b6992fb2-7bf4-401d-a233-e34a486b9337/gif.gif');background-size:cover;height:100vh;">
 <center>
 <h1 style="padding-top:45px;">Welcome to Admin Panel</h1>
 <small>This Page is Completely Separate from Main Page</small>
 <h6>Feel Free to Make Changes to your Blog!</h6>
 </center>
 </div>
-<div style="float:left;width:25%;"><br></div>
+<div style="float:left;height:35vh;width:100%;"><br></div>
 </html>

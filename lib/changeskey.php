@@ -57,8 +57,7 @@ a{
 </nav>
 <!--NAVIGATION BAR-->
 
-<div style="width:25%;float:left;"><br></div>
-<div style="width:50%;float:left;">
+<div style="width:100%;float:left;padding:0px 15px;">
 <br>
 <h5>Change Secret Key</h5>
 <hr>
@@ -96,5 +95,5 @@ if (isset($_POST['nskey_btn'])) {
     header('location: dash.php?keyupdate=success');
 }
 ?>
-<div style="width:25%;float:left;"><br></div>
+<div style="float:left;height:35vh;width:100%;"><br></div>
 </html>

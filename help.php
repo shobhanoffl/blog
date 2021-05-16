@@ -55,18 +55,19 @@ if (isset($_GET['logout'])) {
   </div>
 </nav>
 <!--NAVIGATION BAR-->
-<div style="float:left;width:25%;"><br></div>
-<div style="float:left;width:50%;background: url('https://buffer.com/library/content/images/library/wp-content/uploads/2016/06/giphy.gif');background-size:cover;height:100vh;">
+<div style="float:left;width:100%;background: url('https://buffer.com/library/content/images/library/wp-content/uploads/2016/06/giphy.gif');background-size:cover;height:100vh;">
+<div style="color:white;">
 <center>
 <h1 style="padding-top:45px;">Welcome to Help Page</h1>
 <br><br>
 <h5><i class="fa fa-star"></i> Want to Write Here?</h5>
 </center><br>
-<div style="padding-left:14em;">
-<h6><i class="fa fa-circle"></i> You need a secret key to Create a Account <br><br> Contact <i>Shobhan</i> by Whatsapp or Phone Call <br><br>to get the Secret Key</h6><br>
+<div style="padding-left:37em;">
+<h6><i class="fa fa-circle"></i> You need a secret key to Create a Account <br><br> Contact <i>Shobhan ~ rshobhan02@gmail.com</i> by Whatsapp or Phone Call <br><br>to get the Secret Key</h6><br>
 <h6><i class="fa fa-circle"></i> Then Click Signup to Create a Account</h6><br>
 <h6><i class="fa fa-circle"></i> Enter respective details and Start Writing!</h6>
 </div>
 </div>
-<div style="float:left;width:25%;"><br></div>
+</div>
+<div style="float:left;height:35vh;width:100%;"><br></div>
 </html>

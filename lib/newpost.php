@@ -56,8 +56,7 @@ a{
 </nav>
 <!--NAVIGATION BAR--> 
 
-<div style="width:10%;float:left;"><br></div>
-<div style="width:80%;float:left;">
+<div style="width:100%;float:left;padding: 0px 15px;">
 <br>
 <h5>New Blog Post</h5>
 <hr>
@@ -77,22 +76,27 @@ a{
   <textarea name="editor" id="editor" rows="40" cols="80" class="form-control" placeholder="Your Content goes here...">
   </textarea><br>
 
-  <label for="sources">Sources:</label><small style="color:#999999;"> &nbsp;&nbsp;&nbsp;&nbsp;'Enter Sources in accordance with Links / Enter comma separated texts'</small><br>
-  <input type="text" name="sources" placeholder="Enter the sources you referred" size="80" class="form-control" autocomplete="off"><br>
+  <small style="color:#999999;">'Enter Name of Sites & their Links you referred to write this article'</small><br>
+  <label for="sources">Site Name:</label><small style="color:#999999;"> &nbsp;&nbsp;&nbsp;&nbsp;'Enter Sources in accordance with Links / Enter comma separated texts'</small><br>
+  <input type="text" name="sources" placeholder="Wikipedia,Google" size="80" class="form-control" autocomplete="off"><br>
   
-  <label for="links">Links: </label><small style="color:#999999;"> &nbsp;&nbsp;&nbsp;&nbsp;'https://' already included</small><br>
-  <input type="text" name="links" placeholder="Enter the links for referrence" size="80" class="form-control" autocomplete="off"><br>
+  <label for="links">Site Links: </label><small style="color:#999999;"> &nbsp;&nbsp;&nbsp;&nbsp;</small><br>
+  <input type="text" name="links" placeholder="wikipedia.com,google.com" size="80" class="form-control" autocomplete="off"><br>
   
-  <label for="tags">Tags:</label><br>
+  <label for="tags">Tags:</label><br><small style="color:#999999;">'Enter Tags related to your post/Enter comma separated texts even it has space'</small><br>
   <input type="text" name="tags" placeholder="Enter the Tags" size="80" class="form-control" autocomplete="off"><br>
 
-  <label for="pgofblog">Page of Blog:</label><br>
-  <input type="text" name="pgofblog" placeholder="Enter the Page of Blog" size="80" class="form-control" autocomplete="off"><br>
+  <label for="pgofblog">Select the Page to Post this Blog:</label><br>
+  <select class="form-control" name="pgofblog" id="pgofblog" style="width:10em;">
+  <?php foreach($pgname as $pgname2) : ?>
+  <option value="<?php echo $pgname2 ?>"><?php echo $pgname2 ?></option>
+  <?php endforeach ?>
+  </select><br><br>
 
   <input class="btn btn-primary" type="submit" name="addblog_btn" value="Submit">
 </form>
 </div>
-<div style="width:10%;float:left;"><br></div>
+<div style="float:left;height:35vh;width:100%;"><br></div>
 
 <!--SCRIPTS-->
 <script type="text/javascript">

@@ -56,8 +56,7 @@ button{
 </nav>
 <!--NAVIGATION BAR-->
 
-<div style="width:25%;float:left;"><br></div>
-<div style="width:50%;float:left;">
+<div style="width:100%;float:left;padding:0px 25px;">
 <br>
 <h5>Dashboard</h5>
 <hr>
@@ -75,6 +74,9 @@ button{
 <a href="changeskey.php"><button class="btn btn-info"><i class="fa fa-key"></i><?php echo " Change Secret Key"; ?></button></a>
 <?php } ?>
 </div>
-<div style="width:25%;float:left;"><br></div>
+<div style="float:left;height:35vh;width:100%;"><br></div>
+
+
+
 
 </html>

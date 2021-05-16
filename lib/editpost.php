@@ -57,8 +57,7 @@ a{
 </nav>
 <!--NAVIGATION BAR-->
 
-<div style="width:25%;float:left;"><br></div>
-<div style="width:50%;float:left;">
+<div style="width:100%;float:left;padding:0px 15px;">
 <br>
 <h5>Edit Post</h5>
 <hr>
@@ -105,5 +104,5 @@ if(isset($_POST['blogsearch_btn'])){
 </table>
 <br><br>
 </div>
-<div style="width:25%;float:left;"><br></div>
+<div style="float:left;height:35vh;width:100%;"><br></div>
 </html>
