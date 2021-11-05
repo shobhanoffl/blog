@@ -6,7 +6,7 @@ if (isset($_GET['logout'])) {
   session_destroy();
 }
 ?>
-
+<!--Main Page starts here-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
