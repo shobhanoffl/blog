@@ -1,4 +1,4 @@
-# Personal Blog
+# Complete Blogging Solution
 My one of the very first projects - a Blog with almost all features needed, and even advanced features & access for admins.
 
 ## Features
